@@ -71,6 +71,15 @@
       color:#0f172a;
     }
 
+    /* MENU TOGGLE */
+
+    .menu-toggle{
+      display:none;
+      font-size:30px;
+      color:white;
+      cursor:pointer;
+    }
+
     /* ================= HERO ================= */
 
     .hero{
@@ -81,7 +90,7 @@
       overflow:hidden;
     }
 
-    /* SLIDE GAMBAR */
+    /* SLIDER */
 
     .slider{
       width:100%;
@@ -126,8 +135,8 @@
       left:0;
 
       background:linear-gradient(
-        rgba(15,23,42,0.55),
-        rgba(15,23,42,0.55)
+        rgba(15,23,42,0.60),
+        rgba(15,23,42,0.60)
       );
 
       z-index:1;
@@ -233,7 +242,7 @@
       color:#0f172a;
     }
 
-    /* ================= CARDS ================= */
+    /* ================= CARD ================= */
 
     .card-container{
       display:grid;
@@ -287,120 +296,93 @@
 
     /* ================= TESTIMONI ================= */
 
-.testimoni-section{
-  padding:90px 8%;
-  background:#f8fafc;
-  overflow:hidden;
-}
+    .testimoni-section{
+      padding:90px 8%;
+      background:#f8fafc;
+      overflow:hidden;
+    }
 
-.testimoni-title{
-  text-align:center;
-  margin-bottom:60px;
-}
+    .testimoni-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
 
-.testimoni-title h4{
-  color:#14b8a6;
-  font-size:22px;
-  margin-bottom:10px;
-}
+    .testimoni-title h4{
+      color:#14b8a6;
+      font-size:22px;
+      margin-bottom:10px;
+    }
 
-.testimoni-title h2{
-  font-size:42px;
-  color:#0f172a;
-}
+    .testimoni-title h2{
+      font-size:42px;
+      color:#0f172a;
+    }
 
-.testimoni-wrapper{
-  width:100%;
-  overflow:hidden;
-  position:relative;
-}
+    .testimoni-wrapper{
+      width:100%;
+      overflow:hidden;
+      position:relative;
+    }
 
-.testimoni-slider{
-  display:flex;
-  gap:25px;
-  width:max-content;
+    .testimoni-slider{
+      display:flex;
+      gap:25px;
+      width:max-content;
 
-  animation:testiSlide 32s linear infinite;
-}
+      animation:testiSlide 32s linear infinite;
+    }
 
-.testi-card{
-  width:320px;
-  background:white;
-  padding:30px;
-  border-radius:25px;
+    .testi-card{
+      width:320px;
+      background:white;
+      padding:30px;
+      border-radius:25px;
 
-  border:1px solid #e2e8f0;
+      border:1px solid #e2e8f0;
 
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
 
-  flex-shrink:0;
-}
+      flex-shrink:0;
+    }
 
-.testi-card h3{
-  font-size:22px;
-  color:#0f172a;
-  margin-bottom:8px;
-}
+    .testi-card h3{
+      font-size:22px;
+      color:#0f172a;
+      margin-bottom:8px;
+    }
 
-.stars{
-  color:#facc15;
-  font-size:20px;
-  margin-bottom:10px;
-}
+    .stars{
+      color:#facc15;
+      font-size:20px;
+      margin-bottom:10px;
+    }
 
-.testi-card span{
-  color:#14b8a6;
-  font-size:14px;
-  font-weight:500;
-}
+    .testi-card span{
+      color:#14b8a6;
+      font-size:14px;
+      font-weight:500;
+    }
 
-.testi-card p{
-  margin-top:18px;
-  line-height:1.8;
-  color:#475569;
-  font-size:15px;
-}
+    .testi-card p{
+      margin-top:18px;
+      line-height:1.8;
+      color:#475569;
+      font-size:15px;
+    }
 
-/* ANIMASI GESER */
+    /* ANIMASI TESTI */
 
-@keyframes testiSlide{
+    @keyframes testiSlide{
 
-  0%{
-    transform:translateX(0);
-  }
+      0%{
+        transform:translateX(0);
+      }
 
-  100%{
-    transform:translateX(-50%);
-  }
+      100%{
+        transform:translateX(-50%);
+      }
 
-}
-
-/* ================= RESPONSIVE HP ================= */
-
-@media(max-width:900px){
-
-  .testimoni-section{
-    padding:70px 6%;
-  }
-
-  .testimoni-title h4{
-    font-size:18px;
-  }
-
-  .testimoni-title h2{
-    font-size:30px;
-  }
-
-  .testi-card{
-    width:270px;
-    padding:25px;
-  }
-
-  .testi-card h3{
-    font-size:20px;
-  }
-
-}
+    }
 
     /* ================= FOOTER ================= */
 
@@ -413,41 +395,55 @@
       font-size:15px;
     }
 
-    /* ================= RESPONSIVE HP ================= */
+    /* ================= RESPONSIVE ================= */
 
     @media(max-width:900px){
 
       nav{
+        padding:18px 6%;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      nav ul{
+        position:absolute;
+        top:75px;
+        left:0;
+
+        width:100%;
+
+        background:#14b8a6;
+
         flex-direction:column;
-        gap:15px;
-        padding:18px 5%;
+
+        align-items:center;
+
+        gap:20px;
+
+        padding:25px 0;
+
+        display:none;
+      }
+
+      nav ul.active{
+        display:flex;
       }
 
       .logo{
         font-size:24px;
       }
 
-      nav ul{
-        width:100%;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-      }
-
-      nav ul li a{
-        font-size:14px;
-      }
-
       /* HERO */
 
       .hero{
         height:430px;
-        margin-top:120px;
       }
 
       .hero-content{
         justify-content:flex-start;
-        padding:60px 7% 0;
+        padding:70px 7% 0;
       }
 
       .hero-content h1{
@@ -491,11 +487,27 @@
         font-size:15px;
       }
 
+      /* TESTI */
+
+      .testimoni-section{
+        padding:70px 6%;
+      }
+
+      .testimoni-title h2{
+        font-size:30px;
+      }
+
+      .testi-card{
+        width:270px;
+        padding:25px;
+      }
+
     }
 
   </style>
 
 </head>
+
 <body>
 
   <!-- ================= NAVBAR ================= -->
@@ -506,21 +518,29 @@
       Sulthan Computer
     </div>
 
-    <ul>
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Program Conditions</a></li>
-      <li><a href="#">Tentang Kami</a></li>
-      <li><a href="#">Need Help</a></li>
-      <li><a href="#">FAQ</a></li>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <ul id="nav-menu">
+
+      <li><a href="#beranda">Beranda</a></li>
+
+      <li><a href="#program">Program Conditions</a></li>
+
+      <li><a href="#tentang">Tentang Kami</a></li>
+
+      <li><a href="#testimoni">Testimoni</a></li>
+
+      <li><a href="#footer">FAQ</a></li>
+
     </ul>
 
   </nav>
 
   <!-- ================= HERO ================= -->
 
-  <section class="hero">
-
-    <!-- GAMBAR SLIDE -->
+  <section class="hero" id="beranda">
 
     <div class="slider">
 
@@ -534,11 +554,7 @@
 
     </div>
 
-    <!-- OVERLAY -->
-
     <div class="overlay"></div>
-
-    <!-- TULISAN -->
 
     <div class="hero-content">
 
@@ -561,9 +577,9 @@
 
   </section>
 
-  <!-- ================= SECTION ================= -->
+  <!-- ================= PROGRAM ================= -->
 
-  <section class="section">
+  <section class="section" id="program">
 
     <div class="section-title">
 
@@ -578,8 +594,6 @@
 
     <div class="card-container">
 
-      <!-- CARD 1 -->
-
       <div class="card">
 
         <div class="icon">📘</div>
@@ -592,8 +606,6 @@
         </p>
 
       </div>
-
-      <!-- CARD 2 -->
 
       <div class="card">
 
@@ -608,7 +620,7 @@
 
       </div>
 
-            <div class="card">
+      <div class="card">
 
         <div class="icon">👨‍🏫</div>
 
@@ -620,8 +632,6 @@
         </p>
 
       </div>
-
-      <!-- CARD 3 -->
 
       <div class="card">
 
@@ -636,10 +646,6 @@
 
       </div>
 
-      <!-- CARD 4 -->
-
-      <!-- CARD 5 -->
-
       <div class="card">
 
         <div class="icon">🎓</div>
@@ -652,8 +658,6 @@
         </p>
 
       </div>
-
-      <!-- CARD 6 -->
 
       <div class="card">
 
@@ -674,176 +678,122 @@
 
   <!-- ================= TESTIMONI ================= -->
 
-<section class="testimoni-section">
+  <section class="testimoni-section" id="testimoni">
 
-  <div class="testimoni-title">
+    <div class="testimoni-title">
 
-    <h4>Pengalaman Alumni Sulthan Computer</h4>
+      <h4>Pengalaman Alumni Sulthan Computer</h4>
 
-    <h2>
-      Apa Kata Alumni Kami?
-    </h2>
+      <h2>
+        Apa Kata Alumni Kami?
+      </h2>
 
-  </div>
+    </div>
 
-  <div class="testimoni-wrapper">
+    <div class="testimoni-wrapper">
 
-    <div class="testimoni-slider">
+      <div class="testimoni-slider">
 
-      <!-- TESTI 1 -->
+        <div class="testi-card">
 
-      <div class="testi-card">
+          <h3>Andi Saputra</h3>
 
-        <h3>Andi Saputra</h3>
+          <div class="stars">★★★★★</div>
 
-        <div class="stars">★★★★★</div>
+          <span>Alumni Sulthan Computer</span>
 
-        <span>Alumni Sulthan Computer</span>
+          <p>
+            Pelatihan desain grafisnya sangat mudah dipahami.
+            Saya jadi lebih percaya diri menggunakan Photoshop.
+          </p>
 
-        <p>
-          Pelatihan desain grafisnya sangat mudah dipahami.
-          Saya jadi bisa menggunakan Photoshop dan CorelDraw
-          dengan lebih percaya diri.
-        </p>
+        </div>
 
-      </div>
+        <div class="testi-card">
 
-      <!-- TESTI 2 -->
+          <h3>Rina Oktavia</h3>
 
-      <div class="testi-card">
+          <div class="stars">★★★★★</div>
 
-        <h3>Rina Oktavia</h3>
+          <span>Alumni Sulthan Computer</span>
 
-        <div class="stars">★★★★★</div>
+          <p>
+            Belajar Microsoft Office di sini sangat membantu
+            untuk kebutuhan sekolah dan kerja.
+          </p>
 
-        <span>Alumni Sulthan Computer</span>
+        </div>
 
-        <p>
-          Belajar Microsoft Office di sini sangat membantu.
-          Materi Excel dan Word dijelaskan dengan detail
-          dan mudah dipahami.
-        </p>
+        <div class="testi-card">
 
-      </div>
+          <h3>Fahri Ramadhan</h3>
 
-      <!-- TESTI 3 -->
+          <div class="stars">★★★★★</div>
 
-      <div class="testi-card">
+          <span>Alumni Sulthan Computer</span>
 
-        <h3>Fahri Ramadhan</h3>
+          <p>
+            Program RPL sangat keren.
+            Saya belajar coding website dari dasar.
+          </p>
 
-        <div class="stars">★★★★★</div>
+        </div>
 
-        <span>Alumni Sulthan Computer</span>
+        <div class="testi-card">
 
-        <p>
-          Program RPL sangat keren. Saya belajar coding website
-          dari dasar sampai bisa membuat project sendiri.
-        </p>
+          <h3>Siti Aulia</h3>
 
-      </div>
+          <div class="stars">★★★★★</div>
 
-      <!-- TESTI 4 -->
+          <span>Alumni Sulthan Computer</span>
 
-      <div class="testi-card">
+          <p>
+            Tempat kursus nyaman dan instrukturnya ramah.
+            Sangat cocok untuk pemula.
+          </p>
 
-        <h3>Siti Aulia</h3>
-
-        <div class="stars">★★★★★</div>
-
-        <span>Alumni Sulthan Computer</span>
-
-        <p>
-          Tempat kursusnya nyaman dan instrukturnya ramah.
-          Saya jadi lebih semangat belajar desain grafis.
-        </p>
-
-      </div>
-
-      <!-- TESTI 5 -->
-
-      <div class="testi-card">
-
-        <h3>Dika Pratama</h3>
-
-        <div class="stars">★★★★★</div>
-
-        <span>Alumni Sulthan Computer</span>
-
-        <p>
-          Materi Office sangat bermanfaat untuk dunia kerja.
-          Sekarang saya lebih mahir menggunakan Excel.
-        </p>
-
-      </div>
-
-      <!-- TESTI 6 -->
-
-      <div class="testi-card">
-
-        <h3>Nabila Putri</h3>
-
-        <div class="stars">★★★★★</div>
-
-        <span>Alumni Sulthan Computer</span>
-
-        <p>
-          Saya suka metode pembelajarannya karena dijelaskan
-          secara perlahan dan mudah dimengerti.
-        </p>
-
-      </div>
-
-      <!-- TESTI 7 -->
-
-      <div class="testi-card">
-
-        <h3>Rizky Maulana</h3>
-
-        <div class="stars">★★★★★</div>
-
-        <span>Alumni Sulthan Computer</span>
-
-        <p>
-          Belajar RPL di Sulthan Computer membuat saya
-          lebih memahami HTML, CSS, dan JavaScript.
-        </p>
-
-      </div>
-
-      <!-- TESTI 8 -->
-
-      <div class="testi-card">
-
-        <h3>Putri Amelia</h3>
-
-        <div class="stars">★★★★★</div>
-
-        <span>Alumni Sulthan Computer</span>
-
-        <p>
-          Pelatihan sangat bagus dan suasana belajarnya nyaman.
-          Saya mendapatkan banyak pengalaman baru.
-        </p>
+        </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
-
-
+  </section>
 
   <!-- ================= FOOTER ================= -->
 
-  <footer>
+  <footer id="footer">
 
     © 2026 LKP Sulthan Computer - All Rights Reserved
 
   </footer>
 
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.onclick = function(){
+
+      navMenu.classList.toggle("active");
+
+    }
+
+    const navLinks = document.querySelectorAll("#nav-menu a");
+
+    navLinks.forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
-
