@@ -1,915 +1,217 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= BERANDA ================= -->
 
-  <title>LKP Sulthan Computer</title>
+<section class="page-section" id="beranda">
 
-  <!-- FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- HERO -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <section class="hero">
 
-  <style>
+    <div class="slider">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-    }
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400">
 
-    html{
-      scroll-behavior:smooth;
-    }
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400">
 
-    body{
-      background:#f5f7fa;
-      color:#1e293b;
-      overflow-x:hidden;
-    }
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400">
 
-    /* ================= NAVBAR ================= */
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400">
 
-    nav{
-      width:100%;
-      background:#14b8a6;
-      padding:16px 7%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:1000;
-      box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .logo{
-      color:white;
-      font-size:28px;
-      font-weight:700;
-    }
-
-    nav ul{
-      display:flex;
-      list-style:none;
-      gap:28px;
-    }
-
-    nav ul li a{
-      text-decoration:none;
-      color:white;
-      font-size:15px;
-      font-weight:500;
-      transition:0.3s;
-      cursor:pointer;
-    }
-
-    nav ul li a:hover{
-      color:#0f172a;
-    }
-
-    /* MENU HP */
-
-    .menu-toggle{
-      display:none;
-      font-size:30px;
-      color:white;
-      cursor:pointer;
-    }
-
-    /* ================= PAGE ================= */
-
-    .page-section{
-      display:none;
-      min-height:100vh;
-    }
-
-    #beranda{
-      display:block;
-    }
-
-    /* ================= HERO ================= */
-
-    .hero{
-      width:100%;
-      height:520px;
-      margin-top:78px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    /* SLIDER */
-
-    .slider{
-      width:100%;
-      height:100%;
-      position:absolute;
-      top:0;
-      left:0;
-    }
-
-    .slider img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      position:absolute;
-      opacity:0;
-      animation:slideShow 16s infinite;
-    }
-
-    .slider img:nth-child(1){
-      animation-delay:0s;
-    }
-
-    .slider img:nth-child(2){
-      animation-delay:4s;
-    }
-
-    .slider img:nth-child(3){
-      animation-delay:8s;
-    }
-
-    .slider img:nth-child(4){
-      animation-delay:12s;
-    }
-
-    /* OVERLAY */
-
-    .overlay{
-      width:100%;
-      height:100%;
-      position:absolute;
-      top:0;
-      left:0;
-
-      background:linear-gradient(
-        rgba(15,23,42,0.60),
-        rgba(15,23,42,0.60)
-      );
-
-      z-index:1;
-    }
-
-    /* HERO CONTENT */
-
-    .hero-content{
-      position:relative;
-      z-index:5;
-      color:white;
-
-      height:100%;
-
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-
-      padding:0 8%;
-    }
-
-    .hero-content h1{
-      font-size:60px;
-      line-height:1.2;
-      margin-bottom:20px;
-      max-width:700px;
-    }
-
-    .hero-content span{
-      color:#5eead4;
-    }
-
-    .hero-content p{
-      font-size:18px;
-      line-height:1.8;
-      max-width:700px;
-      color:#e2e8f0;
-    }
-
-    .btn{
-      width:fit-content;
-      margin-top:30px;
-      text-decoration:none;
-      background:#14b8a6;
-      color:white;
-      padding:14px 32px;
-      border-radius:50px;
-      font-weight:600;
-      transition:0.3s;
-    }
-
-    .btn:hover{
-      background:#0f766e;
-      transform:translateY(-3px);
-    }
-
-    /* ANIMASI */
-
-    @keyframes slideShow{
-
-      0%{
-        opacity:0;
-      }
-
-      5%{
-        opacity:1;
-      }
-
-      25%{
-        opacity:1;
-      }
-
-      30%{
-        opacity:0;
-      }
-
-      100%{
-        opacity:0;
-      }
-
-    }
-
-    /* ================= SECTION ================= */
-
-    .section{
-      padding:90px 8%;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:70px;
-    }
-
-    .section-title h4{
-      color:#14b8a6;
-      font-size:22px;
-      margin-bottom:10px;
-    }
-
-    .section-title h2{
-      font-size:42px;
-      line-height:1.4;
-      color:#0f172a;
-    }
-
-    .section-title p{
-      margin-top:15px;
-      color:#64748b;
-      font-size:17px;
-      line-height:1.8;
-    }
-
-    /* ================= CARD ================= */
-
-    .card-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
-    }
-
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:24px;
-      border:1px solid #e2e8f0;
-
-      transition:0.3s;
-
-      box-shadow:0 8px 25px rgba(0,0,0,0.04);
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-
-      box-shadow:0 15px 35px rgba(20,184,166,0.12);
-    }
-
-    .icon{
-      width:75px;
-      height:75px;
-      background:#ccfbf1;
-      border-radius:50%;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:34px;
-
-      margin-bottom:22px;
-    }
-
-    .card h3{
-      font-size:26px;
-      margin-bottom:16px;
-      color:#0f172a;
-    }
-
-    .card p{
-      color:#475569;
-      line-height:1.8;
-      font-size:16px;
-    }
-
-    /* ================= TESTIMONI ================= */
-
-    .testimoni-section{
-      padding:90px 8%;
-      background:#f8fafc;
-      overflow:hidden;
-    }
-
-    .testimoni-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
-
-    .testimoni-title h4{
-      color:#14b8a6;
-      font-size:22px;
-      margin-bottom:10px;
-    }
-
-    .testimoni-title h2{
-      font-size:42px;
-      color:#0f172a;
-    }
-
-    .testimoni-wrapper{
-      width:100%;
-      overflow:hidden;
-      position:relative;
-    }
-
-    .testimoni-slider{
-      display:flex;
-      gap:25px;
-      width:max-content;
-
-      animation:testiSlide 35s linear infinite;
-    }
-
-    .testi-card{
-      width:320px;
-      background:white;
-      padding:30px;
-      border-radius:25px;
-
-      border:1px solid #e2e8f0;
-
-      box-shadow:0 10px 25px rgba(0,0,0,0.05);
-
-      flex-shrink:0;
-    }
-
-    .testi-card h3{
-      font-size:22px;
-      color:#0f172a;
-      margin-bottom:8px;
-    }
-
-    .stars{
-      color:#facc15;
-      font-size:20px;
-      margin-bottom:10px;
-    }
-
-    .testi-card span{
-      color:#14b8a6;
-      font-size:14px;
-      font-weight:500;
-    }
-
-    .testi-card p{
-      margin-top:18px;
-      line-height:1.8;
-      color:#475569;
-      font-size:15px;
-    }
-
-    @keyframes testiSlide{
-
-      0%{
-        transform:translateX(0);
-      }
-
-      100%{
-        transform:translateX(-50%);
-      }
-
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer{
-      background:#0f172a;
-      color:white;
-      text-align:center;
-      padding:28px;
-      margin-top:50px;
-      font-size:15px;
-    }
-
-    /* ================= RESPONSIVE ================= */
-
-    @media(max-width:900px){
-
-      nav{
-        padding:18px 6%;
-      }
-
-      .menu-toggle{
-        display:block;
-      }
-
-      nav ul{
-        position:absolute;
-        top:75px;
-        left:0;
-
-        width:100%;
-
-        background:#14b8a6;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:20px;
-
-        padding:25px 0;
-
-        display:none;
-      }
-
-      nav ul.active{
-        display:flex;
-      }
-
-      .logo{
-        font-size:24px;
-      }
-
-      /* HERO */
-
-      .hero{
-        height:430px;
-      }
-
-      .hero-content{
-        justify-content:flex-start;
-        padding:70px 7% 0;
-      }
-
-      .hero-content h1{
-        font-size:34px;
-        max-width:100%;
-      }
-
-      .hero-content p{
-        font-size:15px;
-        max-width:100%;
-      }
-
-      .btn{
-        padding:12px 24px;
-        font-size:14px;
-      }
-
-      /* SECTION */
-
-      .section{
-        padding:70px 6%;
-      }
-
-      .section-title h4{
-        font-size:18px;
-      }
-
-      .section-title h2{
-        font-size:28px;
-      }
-
-      .card{
-        padding:28px;
-      }
-
-      .card h3{
-        font-size:22px;
-      }
-
-      .card p{
-        font-size:15px;
-      }
-
-      /* TESTIMONI */
-
-      .testimoni-section{
-        padding:70px 6%;
-      }
-
-      .testimoni-title h2{
-        font-size:30px;
-      }
-
-      .testi-card{
-        width:270px;
-        padding:25px;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <!-- ================= NAVBAR ================= -->
-
-  <nav>
-
-    <div class="logo">
-      Sulthan Computer
     </div>
 
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>
+        Selamat Datang di <br>
+        <span>LKP Sulthan Computer</span>
+      </h1>
+
+      <p>
+        Tempat belajar komputer modern dengan suasana nyaman,
+        fasilitas lengkap, dan pembelajaran yang mudah dipahami.
+      </p>
+
+      <a href="#" class="btn">
+        Mulai Belajar
+      </a>
+
     </div>
 
-    <ul id="nav-menu">
-
-      <li>
-        <a onclick="showSection('beranda')">
-          Beranda
-        </a>
-      </li>
-
-      <li>
-        <a onclick="showSection('program')">
-          Program Conditions
-        </a>
-      </li>
-
-      <li>
-        <a onclick="showSection('tentang')">
-          Tentang Kami
-        </a>
-      </li>
-
-      <li>
-        <a onclick="showSection('testimoni')">
-          Testimoni
-        </a>
-      </li>
-
-      <li>
-        <a onclick="showSection('help')">
-          Need Help
-        </a>
-      </li>
-
-    </ul>
-
-  </nav>
-
-  <!-- ================= BERANDA ================= -->
-
-  <section class="page-section" id="beranda">
-
-    <section class="hero">
-
-      <div class="slider">
-
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400">
-
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400">
-
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400">
-
-        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400">
-
-      </div>
-
-      <div class="overlay"></div>
-
-      <div class="hero-content">
-
-        <h1>
-          Selamat Datang di <br>
-          <span>LKP Sulthan Computer</span>
-        </h1>
-
-        <p>
-          Tempat belajar komputer modern dengan suasana nyaman,
-          fasilitas lengkap, dan pembelajaran yang mudah dipahami.
-        </p>
-
-        <a href="#" class="btn">
-          Mulai Belajar
-        </a>
-
-      </div>
-
-    </section>
-
   </section>
 
-  <!-- ================= PROGRAM ================= -->
+  <!-- MENGAPA MEMILIH KAMI -->
 
-  <section class="page-section" id="program">
+  <section class="section">
 
-    <section class="section">
+    <div class="section-title">
 
-      <div class="section-title">
+      <h4>Mengapa Memilih Kami</h4>
 
-        <h4>Mengapa Memilih Kami</h4>
+      <h2>
+        Kursus Pelatihan Komputer
+        yang Profesional
+      </h2>
 
-        <h2>
-          Kursus Pelatihan Komputer
-          yang Profesional
-        </h2>
+      <p>
+        Belajar komputer modern dengan pengajar profesional,
+        fasilitas lengkap, dan pembelajaran yang mudah dipahami.
+      </p>
 
-      </div>
+    </div>
 
-      <div class="card-container">
+    <div class="card-container">
 
-        <div class="card">
+      <div class="card">
 
-          <div class="icon">📘</div>
+        <div class="icon">📘</div>
 
-          <h3>Kurikulum</h3>
-
-          <p>
-            Materi pembelajaran modern dan mengikuti
-            perkembangan teknologi terbaru.
-          </p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="icon">💻</div>
-
-          <h3>Fasilitas</h3>
-
-          <p>
-            Ruang belajar nyaman dengan fasilitas
-            komputer lengkap dan modern.
-          </p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="icon">👨‍🏫</div>
-
-          <h3>Instruktur</h3>
-
-          <p>
-            Dibimbing langsung oleh pengajar
-            berpengalaman dan profesional.
-          </p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="icon">📈</div>
-
-          <h3>Top Skill</h3>
-
-          <p>
-            Membantu meningkatkan kemampuan
-            hard skill dan soft skill.
-          </p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="icon">🎓</div>
-
-          <h3>Alumni</h3>
-
-          <p>
-            Banyak alumni yang berkembang
-            di bidang teknologi dan kerja.
-          </p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="icon">🏆</div>
-
-          <h3>Bersertifikat</h3>
-
-          <p>
-            Mendapatkan sertifikat resmi
-            setelah menyelesaikan pelatihan.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </section>
-
-  <!-- ================= TENTANG ================= -->
-
-  <section class="page-section" id="tentang">
-
-    <section class="section">
-
-      <div class="section-title">
-
-        <h4>Tentang Kami</h4>
-
-        <h2>
-          LKP Sulthan Computer
-        </h2>
+        <h3>Kurikulum</h3>
 
         <p>
-          LKP Sulthan Computer merupakan tempat pelatihan
-          komputer modern yang menyediakan pembelajaran
-          desain grafis, Microsoft Office, dan RPL.
+          Materi pembelajaran modern dan mengikuti
+          perkembangan teknologi terbaru.
         </p>
 
       </div>
 
-    </section>
+      <div class="card">
 
-  </section>
+        <div class="icon">💻</div>
 
-  <!-- ================= TESTIMONI ================= -->
-
-  <section class="page-section" id="testimoni">
-
-    <section class="testimoni-section">
-
-      <div class="testimoni-title">
-
-        <h4>Pengalaman Alumni Sulthan Computer</h4>
-
-        <h2>
-          Apa Kata Alumni Kami?
-        </h2>
-
-      </div>
-
-      <div class="testimoni-wrapper">
-
-        <div class="testimoni-slider">
-
-          <div class="testi-card">
-
-            <h3>Andi Saputra</h3>
-
-            <div class="stars">★★★★★</div>
-
-            <span>Alumni Sulthan Computer</span>
-
-            <p>
-              Pelatihan desain grafisnya sangat mudah dipahami.
-            </p>
-
-          </div>
-
-          <div class="testi-card">
-
-            <h3>Rina Oktavia</h3>
-
-            <div class="stars">★★★★★</div>
-
-            <span>Alumni Sulthan Computer</span>
-
-            <p>
-              Belajar Microsoft Office di sini sangat membantu.
-            </p>
-
-          </div>
-
-          <div class="testi-card">
-
-            <h3>Fahri Ramadhan</h3>
-
-            <div class="stars">★★★★★</div>
-
-            <span>Alumni Sulthan Computer</span>
-
-            <p>
-              Program RPL sangat keren dan mudah dipahami.
-            </p>
-
-          </div>
-
-          <div class="testi-card">
-
-            <h3>Siti Aulia</h3>
-
-            <div class="stars">★★★★★</div>
-
-            <span>Alumni Sulthan Computer</span>
-
-            <p>
-              Tempat kursus nyaman dan instrukturnya ramah.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </section>
-
-  <!-- ================= HELP ================= -->
-
-  <section class="page-section" id="help">
-
-    <section class="section">
-
-      <div class="section-title">
-
-        <h4>Need Help</h4>
-
-        <h2>
-          Butuh Bantuan?
-        </h2>
+        <h3>Fasilitas</h3>
 
         <p>
-          Hubungii admin Sulthan Computer untuk
-          informasi pendaftaran dan pelatihan.
+          Ruang belajar nyaman dengan fasilitas
+          komputer lengkap dan modern.
         </p>
 
       </div>
 
-    </section>
+      <div class="card">
+
+        <div class="icon">👨‍🏫</div>
+
+        <h3>Instruktur</h3>
+
+        <p>
+          Dibimbing langsung oleh pengajar
+          berpengalaman dan profesional.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="icon">📈</div>
+
+        <h3>Top Skill</h3>
+
+        <p>
+          Membantu meningkatkan kemampuan
+          hard skill dan soft skill.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="icon">🎓</div>
+
+        <h3>Alumni</h3>
+
+        <p>
+          Banyak alumni yang berkembang
+          di bidang teknologi dan kerja.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="icon">🏆</div>
+
+        <h3>Bersertifikat</h3>
+
+        <p>
+          Mendapatkan sertifikat resmi
+          setelah menyelesaikan pelatihan.
+        </p>
+
+      </div>
+
+    </div>
 
   </section>
 
-  <!-- ================= FOOTER ================= -->
+</section>
 
-  <footer>
+<!-- ================= PROGRAM ================= -->
 
-    © 2026 LKP Sulthan Computer - All Rights Reserved
+<section class="page-section" id="program">
 
-  </footer>
+  <section class="section">
 
-  <!-- ================= JAVASCRIPT ================= -->
+    <div class="section-title">
 
-  <script>
+      <h4>Program Conditions</h4>
 
-    // MENU HP
+      <h2>
+        Pilihan Program Pelatihan
+      </h2>
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
+      <p>
+        Pilih program belajar sesuai minat dan kebutuhanmu.
+      </p>
 
-    menuToggle.onclick = function(){
+    </div>
 
-      navMenu.classList.toggle("active");
+    <div class="card-container">
 
-    }
+      <div class="card">
 
-    // GANTI HALAMAN
+        <div class="icon">🎨</div>
 
-    function showSection(sectionId){
+        <h3>Desain Grafis</h3>
 
-      // sembunyikan semua
+        <p>
+          Belajar desain vector dan bitmap menggunakan software modern.
+          <br><br>
+          <b>800 Ribu • 16x Pertemuan</b>
+        </p>
 
-      const sections = document.querySelectorAll(".page-section");
+      </div>
 
-      sections.forEach(section => {
+      <div class="card">
 
-        section.style.display = "none";
+        <div class="icon">🖥️</div>
 
-      });
+        <h3>Microsoft Office</h3>
 
-      // tampilkan yang dipilih
+        <p>
+          Menguasai Word, Excel, dan PowerPoint untuk kebutuhan kerja.
+          <br><br>
+          <b>600 Ribu • 12x Pertemuan</b>
+        </p>
 
-      document.getElementById(sectionId).style.display = "block";
+      </div>
 
-      // tutup menu hp
+      <div class="card">
 
-      navMenu.classList.remove("active");
+        <div class="icon">💻</div>
 
-      // scroll ke atas
+        <h3>RPL</h3>
 
-      window.scrollTo({
-        top:0,
-        behavior:"smooth"
-      });
+        <p>
+          Belajar HTML, CSS, JavaScript, dan dasar pemrograman website.
+          <br><br>
+          <b>1 Juta • 20x Pertemuan</b>
+        </p>
 
-    }
+      </div>
 
-  </script>
+    </div>
 
-</body>
-</html>
+  </section>
+
+</section>
