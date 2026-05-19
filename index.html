@@ -521,6 +521,200 @@
 
     }
 
+/* ================= PROGRAM HERO ================= */
+
+.program-hero{
+  width:100%;
+  height:320px;
+
+  margin-top:78px;
+
+  background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400');
+
+  background-size:cover;
+  background-position:center;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.program-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+
+  background:rgba(15,23,42,0.65);
+}
+
+.program-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:white;
+}
+
+.program-content h1{
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+.program-content p{
+  font-size:18px;
+  color:#dbeafe;
+}
+
+/* ================= PROGRAM CARD ================= */
+
+.program-container{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+}
+
+.program-card{
+  width:100%;
+
+  background:white;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns:350px 1fr;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+  border:1px solid #e2e8f0;
+}
+
+.program-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.program-info{
+  padding:40px;
+}
+
+.program-info h3{
+  font-size:34px;
+  color:#0f172a;
+  margin-bottom:18px;
+}
+
+.desc{
+  color:#475569;
+  line-height:1.9;
+  font-size:16px;
+}
+
+.price-box{
+  margin-top:30px;
+
+  background:#ccfbf1;
+
+  padding:18px 24px;
+
+  border-radius:18px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.price-box h4{
+  font-size:28px;
+  color:#0f766e;
+}
+
+.price-box span{
+  color:#0f172a;
+  font-weight:600;
+}
+
+.apk-list{
+  margin-top:30px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+}
+
+.apk-item{
+  background:#f8fafc;
+
+  padding:22px;
+
+  border-radius:18px;
+
+  border:1px solid #e2e8f0;
+}
+
+.apk-item h5{
+  font-size:20px;
+  color:#14b8a6;
+  margin-bottom:10px;
+}
+
+.apk-item p{
+  color:#475569;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .program-hero{
+    height:260px;
+    margin-top:75px;
+  }
+
+  .program-content h1{
+    font-size:34px;
+  }
+
+  .program-content p{
+    font-size:15px;
+  }
+
+  .program-card{
+    grid-template-columns:1fr;
+  }
+
+  .program-image{
+    height:240px;
+  }
+
+  .program-info{
+    padding:28px;
+  }
+
+  .program-info h3{
+    font-size:28px;
+  }
+
+  .price-box{
+    flex-direction:column;
+    gap:10px;
+    align-items:flex-start;
+  }
+
+  .apk-list{
+    grid-template-columns:1fr;
+  }
+
+}
+
   </style>
 
 </head>
@@ -913,3 +1107,223 @@
 
 </body>
 </html>
+
+<!-- ================= PROGRAM CONDITIONS ================= -->
+
+<section class="page-section" id="program">
+
+  <!-- HERO PROGRAM -->
+
+  <section class="program-hero">
+
+    <div class="program-overlay"></div>
+
+    <div class="program-content">
+
+      <h1>Program Conditions</h1>
+
+      <p>
+        LKP Sulthan Computer
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PROGRAM LIST -->
+
+  <section class="section">
+
+    <div class="section-title">
+
+      <h4>Program Pilihan</h4>
+
+      <h2>
+        Pelatihan Komputer Modern
+      </h2>
+
+    </div>
+
+    <div class="program-container">
+
+      <!-- DESIGN GRAFIS -->
+
+      <div class="program-card">
+
+        <div class="program-image">
+
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200">
+
+        </div>
+
+        <div class="program-info">
+
+          <h3>Design Grafis</h3>
+
+          <p class="desc">
+            Pembelajaran desain vector dan bitmap
+            menggunakan software profesional untuk
+            kebutuhan editing modern.
+          </p>
+
+          <div class="price-box">
+
+            <h4>Rp 800.000</h4>
+
+            <span>16x Pertemuan</span>
+
+          </div>
+
+          <!-- APK -->
+
+          <div class="apk-list">
+
+            <div class="apk-item">
+
+              <h5>CorelDraw</h5>
+
+              <p>
+                Software desain vector untuk membuat
+                logo, banner, poster, dan ilustrasi.
+              </p>
+
+            </div>
+
+            <div class="apk-item">
+
+              <h5>Adobe Photoshop</h5>
+
+              <p>
+                Software editing bitmap untuk manipulasi
+                foto dan desain visual modern.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MICROSOFT OFFICE -->
+
+      <div class="program-card">
+
+        <div class="program-image">
+
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200">
+
+        </div>
+
+        <div class="program-info">
+
+          <h3>Microsoft Office</h3>
+
+          <p class="desc">
+            Belajar Word, Excel, dan PowerPoint
+            untuk kebutuhan sekolah, kerja,
+            dan administrasi modern.
+          </p>
+
+          <div class="price-box">
+
+            <h4>Rp 600.000</h4>
+
+            <span>12x Pertemuan</span>
+
+          </div>
+
+          <div class="apk-list">
+
+            <div class="apk-item">
+
+              <h5>Microsoft Word</h5>
+
+              <p>
+                Digunakan untuk membuat dokumen,
+                surat, laporan, dan pengetikan.
+              </p>
+
+            </div>
+
+            <div class="apk-item">
+
+              <h5>Microsoft Excel</h5>
+
+              <p>
+                Digunakan untuk pengolahan data,
+                tabel, rumus, dan administrasi.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RPL -->
+
+      <div class="program-card">
+
+        <div class="program-image">
+
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200">
+
+        </div>
+
+        <div class="program-info">
+
+          <h3>Rekayasa Perangkat Lunak</h3>
+
+          <p class="desc">
+            Belajar membuat website modern
+            menggunakan HTML, CSS, dan JavaScript
+            dari dasar sampai mahir.
+          </p>
+
+          <div class="price-box">
+
+            <h4>Rp 1.000.000</h4>
+
+            <span>20x Pertemuan</span>
+
+          </div>
+
+          <div class="apk-list">
+
+            <div class="apk-item">
+
+              <h5>Visual Studio Code</h5>
+
+              <p>
+                Editor coding modern untuk membuat
+                website dan aplikasi.
+              </p>
+
+            </div>
+
+            <div class="apk-item">
+
+              <h5>Google Chrome</h5>
+
+              <p>
+                Digunakan untuk menjalankan
+                dan testing website.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
