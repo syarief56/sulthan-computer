@@ -285,6 +285,123 @@
       font-size:16px;
     }
 
+    /* ================= TESTIMONI ================= */
+
+.testimoni-section{
+  padding:90px 8%;
+  background:#f8fafc;
+  overflow:hidden;
+}
+
+.testimoni-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.testimoni-title h4{
+  color:#14b8a6;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.testimoni-title h2{
+  font-size:42px;
+  color:#0f172a;
+}
+
+.testimoni-wrapper{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+.testimoni-slider{
+  display:flex;
+  gap:25px;
+  width:max-content;
+
+  animation:testiSlide 32s linear infinite;
+}
+
+.testi-card{
+  width:320px;
+  background:white;
+  padding:30px;
+  border-radius:25px;
+
+  border:1px solid #e2e8f0;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+  flex-shrink:0;
+}
+
+.testi-card h3{
+  font-size:22px;
+  color:#0f172a;
+  margin-bottom:8px;
+}
+
+.stars{
+  color:#facc15;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.testi-card span{
+  color:#14b8a6;
+  font-size:14px;
+  font-weight:500;
+}
+
+.testi-card p{
+  margin-top:18px;
+  line-height:1.8;
+  color:#475569;
+  font-size:15px;
+}
+
+/* ANIMASI GESER */
+
+@keyframes testiSlide{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+
+/* ================= RESPONSIVE HP ================= */
+
+@media(max-width:900px){
+
+  .testimoni-section{
+    padding:70px 6%;
+  }
+
+  .testimoni-title h4{
+    font-size:18px;
+  }
+
+  .testimoni-title h2{
+    font-size:30px;
+  }
+
+  .testi-card{
+    width:270px;
+    padding:25px;
+  }
+
+  .testi-card h3{
+    font-size:20px;
+  }
+
+}
+
     /* ================= FOOTER ================= */
 
     footer{
@@ -491,6 +608,19 @@
 
       </div>
 
+            <div class="card">
+
+        <div class="icon">👨‍🏫</div>
+
+        <h3>Instruktur</h3>
+
+        <p>
+          Dibimbing langsung oleh pengajar berpengalaman
+          yang mudah dipahami dalam menyampaikan materi.
+        </p>
+
+      </div>
+
       <!-- CARD 3 -->
 
       <div class="card">
@@ -508,26 +638,13 @@
 
       <!-- CARD 4 -->
 
-      <div class="card">
-
-        <div class="icon">👨‍🏫</div>
-
-        <h3>Instruktur</h3>
-
-        <p>
-          Dibimbing langsung oleh pengajar berpengalaman
-          yang mudah dipahami dalam menyampaikan materi.
-        </p>
-
-      </div>
-
       <!-- CARD 5 -->
 
       <div class="card">
 
         <div class="icon">🎓</div>
 
-        <h3>Ribuan Alumni</h3>
+        <h3>Alumni</h3>
 
         <p>
           Banyak alumni yang berhasil mengembangkan
@@ -542,7 +659,7 @@
 
         <div class="icon">🏆</div>
 
-        <h3>Bersertiifikat</h3>
+        <h3>Bersertifikat</h3>
 
         <p>
           Setiap peserta mendapatkan sertifikat
@@ -555,6 +672,170 @@
 
   </section>
 
+  <!-- ================= TESTIMONI ================= -->
+
+<section class="testimoni-section">
+
+  <div class="testimoni-title">
+
+    <h4>Pengalaman Alumni Sulthan Computer</h4>
+
+    <h2>
+      Apa Kata Alumni Kami?
+    </h2>
+
+  </div>
+
+  <div class="testimoni-wrapper">
+
+    <div class="testimoni-slider">
+
+      <!-- TESTI 1 -->
+
+      <div class="testi-card">
+
+        <h3>Andi Saputra</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Pelatihan desain grafisnya sangat mudah dipahami.
+          Saya jadi bisa menggunakan Photoshop dan CorelDraw
+          dengan lebih percaya diri.
+        </p>
+
+      </div>
+
+      <!-- TESTI 2 -->
+
+      <div class="testi-card">
+
+        <h3>Rina Oktavia</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Belajar Microsoft Office di sini sangat membantu.
+          Materi Excel dan Word dijelaskan dengan detail
+          dan mudah dipahami.
+        </p>
+
+      </div>
+
+      <!-- TESTI 3 -->
+
+      <div class="testi-card">
+
+        <h3>Fahri Ramadhan</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Program RPL sangat keren. Saya belajar coding website
+          dari dasar sampai bisa membuat project sendiri.
+        </p>
+
+      </div>
+
+      <!-- TESTI 4 -->
+
+      <div class="testi-card">
+
+        <h3>Siti Aulia</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Tempat kursusnya nyaman dan instrukturnya ramah.
+          Saya jadi lebih semangat belajar desain grafis.
+        </p>
+
+      </div>
+
+      <!-- TESTI 5 -->
+
+      <div class="testi-card">
+
+        <h3>Dika Pratama</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Materi Office sangat bermanfaat untuk dunia kerja.
+          Sekarang saya lebih mahir menggunakan Excel.
+        </p>
+
+      </div>
+
+      <!-- TESTI 6 -->
+
+      <div class="testi-card">
+
+        <h3>Nabila Putri</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Saya suka metode pembelajarannya karena dijelaskan
+          secara perlahan dan mudah dimengerti.
+        </p>
+
+      </div>
+
+      <!-- TESTI 7 -->
+
+      <div class="testi-card">
+
+        <h3>Rizky Maulana</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Belajar RPL di Sulthan Computer membuat saya
+          lebih memahami HTML, CSS, dan JavaScript.
+        </p>
+
+      </div>
+
+      <!-- TESTI 8 -->
+
+      <div class="testi-card">
+
+        <h3>Putri Amelia</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <span>Alumni Sulthan Computer</span>
+
+        <p>
+          Pelatihan sangat bagus dan suasana belajarnya nyaman.
+          Saya mendapatkan banyak pengalaman baru.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
   <!-- ================= FOOTER ================= -->
 
   <footer>
@@ -565,3 +846,4 @@
 
 </body>
 </html>
+
