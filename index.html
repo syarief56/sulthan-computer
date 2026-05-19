@@ -12,7 +12,7 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family:'Poppins', sans-serif;
     }
 
     html{
@@ -67,56 +67,84 @@
     .hero{
       width:100%;
       height:100vh;
-      overflow:hidden;
       position:relative;
+      overflow:hidden;
       margin-top:80px;
     }
 
-    .slides{
-      width:300%;
-      height:100%;
-      display:flex;
-      animation:slide 15s infinite;
-    }
+    /* Background Slider */
 
-    .slide{
+    .background-slider{
       width:100%;
       height:100%;
-      background-size:cover;
-      background-position:center;
-      position:relative;
+      position:absolute;
+      top:0;
+      left:0;
     }
 
-    .slide::before{
-      content:'';
+    .background-slider img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute;
+      opacity:0;
+      animation:fade 16s infinite;
+    }
+
+    /* Gambar 1 */
+    .background-slider img:nth-child(1){
+      animation-delay:0s;
+    }
+
+    /* Gambar 2 */
+    .background-slider img:nth-child(2){
+      animation-delay:4s;
+    }
+
+    /* Gambar 3 */
+    .background-slider img:nth-child(3){
+      animation-delay:8s;
+    }
+
+    /* Gambar 4 */
+    .background-slider img:nth-child(4){
+      animation-delay:12s;
+    }
+
+    /* Overlay */
+
+    .overlay{
       position:absolute;
       width:100%;
       height:100%;
       background:rgba(0,0,0,0.45);
+      z-index:1;
     }
 
-    .slide-content{
+    /* Tulisan Tetap */
+
+    .hero-content{
       position:absolute;
       top:50%;
       left:50%;
       transform:translate(-50%, -50%);
-      color:white;
       text-align:center;
+      color:white;
+      z-index:5;
       width:80%;
-      z-index:10;
     }
 
-    .slide-content h1{
+    .hero-content h1{
       font-size:65px;
+      line-height:1.3;
       margin-bottom:20px;
-      line-height:1.2;
     }
 
-    .slide-content span{
+    .hero-content span{
       color:#5eead4;
     }
 
-    .slide-content p{
+    .hero-content p{
       font-size:20px;
       line-height:1.8;
       max-width:850px;
@@ -140,30 +168,28 @@
       transform:translateY(-3px);
     }
 
-    @keyframes slide{
+    /* Animasi Pergantian Gambar */
+
+    @keyframes fade{
 
       0%{
-        transform:translateX(0);
+        opacity:0;
+      }
+
+      5%{
+        opacity:1;
+      }
+
+      25%{
+        opacity:1;
       }
 
       30%{
-        transform:translateX(0);
-      }
-
-      35%{
-        transform:translateX(-100%);
-      }
-
-      65%{
-        transform:translateX(-100%);
-      }
-
-      70%{
-        transform:translateX(-200%);
+        opacity:0;
       }
 
       100%{
-        transform:translateX(-200%);
+        opacity:0;
       }
 
     }
@@ -191,7 +217,7 @@
       color:#0f172a;
     }
 
-    /* ================= CARDS ================= */
+    /* ================= CARD ================= */
 
     .card-container{
       display:grid;
@@ -261,11 +287,11 @@
         justify-content:center;
       }
 
-      .slide-content h1{
+      .hero-content h1{
         font-size:42px;
       }
 
-      .slide-content p{
+      .hero-content p{
         font-size:16px;
       }
 
@@ -298,80 +324,46 @@
 
   </nav>
 
-  <!-- ================= HERO SLIDER ================= -->
+  <!-- ================= HERO ================= -->
 
   <section class="hero">
 
-    <div class="slides">
+    <!-- Background gambar yang slide -->
 
-      <!-- Slide 1 -->
+    <div class="background-slider">
 
-      <div class="slide"
-      style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400');">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400">
 
-        <div class="slide-content">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400">
 
-          <h1>
-            Selamat Datang di <br>
-            <span>LKP Sulthan Computer</span>
-          </h1>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400">
 
-          <p>
-            Tempat belajar komputer modern dengan suasana nyaman,
-            fasilitas lengkap, dan pembelajaran yang mudah dipahami
-            untuk semua kalangan.
-          </p>
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400">
 
-          <a href="#" class="btn">Mulai Belajar</a>
+    </div>
 
-        </div>
+    <!-- Overlay -->
 
-      </div>
+    <div class="overlay"></div>
 
-      <!-- Slide 2 -->
+    <!-- Tulisan Tetap -->
 
-      <div class="slide"
-      style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400');">
+    <div class="hero-content">
 
-        <div class="slide-content">
+      <h1>
+        Selamat Datang di <br>
+        <span>LKP Sulthan Computer</span>
+      </h1>
 
-          <h1>
-            Belajar Skill <span>Digital</span>
-          </h1>
+      <p>
+        Tempat belajar komputer modern dengan suasana nyaman,
+        fasilitas lengkap, dan pembelajaran yang mudah dipahami
+        untuk semua kalangan.
+      </p>
 
-          <p>
-            Tingkatkan kemampuan di bidang desain,
-            coding, Microsoft Office, dan teknologi
-            bersama mentor profesional.
-          </p>
-
-          <a href="#" class="btn">Lihat Program</a>
-
-        </div>
-
-      </div>
-
-      <!-- Slide 3 -->
-
-      <div class="slide"
-      style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400');">
-
-        <div class="slide-content">
-
-          <h1>
-            Siap Kerja & <span>Bersertifikat</span>
-          </h1>
-
-          <p>
-            Dapatkan pengalaman belajar terbaik dan sertifikat
-            kompetensi untuk menunjang masa depanmu.
-          </p>
-
-          <a href="#" class="btn">Daftar Sekarang</a>
-
-        </div>
-
-      </div>
+      <a href="#" class="btn">
+        Mulai Belajar
+      </a>
 
     </div>
 
