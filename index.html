@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LKP Sulthan Computer</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#111827;
+      color:white;
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      background:#1abc9c;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:white;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#0f172a;
+    }
+
+    /* SLIDER */
+    .hero{
+      margin-top:80px;
+      width:100%;
+      height:90vh;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .slides{
+      width:300%;
+      height:100%;
+      display:flex;
+      animation:slide 15s infinite;
+    }
+
+    .slide{
+      width:100%;
+      height:100%;
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+
+    .slide::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+    }
+
+    .slide-content{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      text-align:center;
+      z-index:2;
+      width:80%;
+    }
+
+    .slide-content h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .slide-content p{
+      font-size:20px;
+      line-height:1.8;
+    }
+
+    @keyframes slide{
+      0%{transform:translateX(0);}
+      30%{transform:translateX(0);}
+
+      35%{transform:translateX(-100%);}
+      65%{transform:translateX(-100%);}
+
+      70%{transform:translateX(-200%);}
+      100%{transform:translateX(-200%);}
+    }
+
+    /* SECTION */
+    .section{
+      padding:80px 8%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h4{
+      color:#1abc9c;
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    .title h2{
+      font-size:45px;
+      line-height:1.4;
+    }
+
+    /* CARD */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#000;
+      padding:35px;
+      border-radius:25px;
+      transition:0.3s;
+      box-shadow:0 0 25px rgba(26,188,156,0.15);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .icon{
+      width:80px;
+      height:80px;
+      background:#dbeafe;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:35px;
+      margin-bottom:25px;
+      color:#1abc9c;
+    }
+
+    .card h3{
+      font-size:30px;
+      margin-bottom:20px;
+    }
+
+    .card p{
+      color:#cbd5e1;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    footer{
+      background:#1abc9c;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+      color:white;
+      font-weight:bold;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .slide-content h1{
+        font-size:38px;
+      }
+
+      .slide-content p{
+        font-size:16px;
+      }
+
+      .title h2{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">LKP Sulthan Computer</div>
+
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Program Conditions</a></li>
+      <li><a href="#">Tentang Kami</a></li>
+      <li><a href="#">Need Help</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SLIDER -->
+  <section class="hero">
+
+    <div class="slides">
+
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200');">
+        <div class="slide-content">
+          <h1>Selamat Datang</h1>
+          <p>
+            Enter di LKP Sulthan Computer, tempat belajar komputer,
+            desain, coding, dan teknologi dengan metode pembelajaran modern.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200');">
+        <div class="slide-content">
+          <h1>Kursus Komputer Terbaik</h1>
+          <p>
+            Belajar bersama instruktur berpengalaman dan fasilitas lengkap
+            untuk mendukung proses belajar kamu.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200');">
+        <div class="slide-content">
+          <h1>Siap Kerja & Bersertifikat</h1>
+          <p>
+            Tingkatkan skill dan raih sertifikat kompetensi
+            untuk masa depan yang lebih baik.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section class="section">
+
+    <div class="title">
+      <h4>Mengapa Memilih Kami</h4>
+
+      <h2>
+        Kursus Pelatihan Komputer <br>
+        yang Berkualitas dan Profesional
+      </h2>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <div class="icon">📘</div>
+        <h3>Kurikulum</h3>
+        <p>
+          Kami menyediakan program pelatihan yang dapat dipilih
+          sesuai kemampuan dan kebutuhan belajar siswa.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Fasilitas</h3>
+        <p>
+          Fasilitas belajar lengkap dan nyaman untuk menunjang
+          proses pembelajaran selama kursus berlangsung.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Top Skill</h3>
+        <p>
+          Pelatihan yang membantu meningkatkan hard skill
+          dan soft skill di bidang teknologi komputer.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍🏫</div>
+        <h3>Instruktur Berkualitas</h3>
+        <p>
+          Didukung instruktur berpengalaman untuk membantu
+          proses belajar menjadi lebih mudah dipahami.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Ribuan Alumni</h3>
+        <p>
+          Telah meluluskan banyak alumni yang berhasil
+          dan berkembang sesuai bidang masing-masing.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏅</div>
+        <h3>Kursus Bersertifikat</h3>
+        <p>
+          Program pelatihan bersertifikat untuk mendukung
+          kompetensi dan peluang kerja peserta kursus.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 LKP Sulthan Computer | All Rights Reserved
+  </footer>
+
+</body>
+</html>
